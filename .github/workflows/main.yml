@@ -1,27 +1,48 @@
-name: Deploy to GitHub Pages
+name: 🚀 Deploy to GitHub Pages
 
+# Trigger workflow on push to the main branch
 on:
   push:
     branches:
       - main
+
+# Environment variables
 env:
   CI: false
 
 jobs:
   deploy:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      # Step 1: Check out the repository
+      - name: 🔄 Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: npm install
+      # Step 2: Set up Node.js environment
+      - name: 🛠️ Set Up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Use desired Node.js version
 
-      - name: Build project
+      # Step 3: Install project dependencies
+      - name: 📦 Install Dependencies
+        run: npm ci
+
+      # Step 4: Build the project
+      - name: 🏗️ Build Project
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      # Step 5: Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.TOKEN }}
-          publish_dir: ./build # Adjust to your build directory
+          publish_dir: ./build # Change if your build directory is different
+          user_name: GitHub Actions
+          user_email: noreply@github.com
+
+      # Step 6: Post-deployment confirmation
+      - name: ✅ Confirm Deployment
+        run: echo "Deployment to GitHub Pages was successful!"
