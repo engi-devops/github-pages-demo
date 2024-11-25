@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff; /* Set overall background to pure white */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container */
+.auth-container {
+  background-color: #f7f4f1; /* Creamy background for the form */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Header */
+.auth-header {
+  margin-bottom: 20px;
+}
+
+.auth-header h1 {
+  font-size: 28px;
+  color: #2b2b2b;
+  margin-bottom: 8px;
+}
+
+.auth-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Form */
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align all form elements */
+}
+
+.form-group {
+  width: 100%; /* Ensure form group takes full width */
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fafafa; /* Light gray background for inputs */
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #24fe41;
+  outline: none;
+  box-shadow: 0 0 6px rgba(36, 254, 65, 0.5);
+}
+
+/* Button */
+.btn-primary {
+  background-color: #24fe41;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px; /* Add spacing between the last input and the button */
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #1fdd36;
+}
+
+/* Responsiveness */
+@media (max-width: 500px) {
+  .auth-container {
+    width: 90%;
+  }
+
+  .auth-header h1 {
+    font-size: 24px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+  }
+}
