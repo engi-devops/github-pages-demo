@@ -14,7 +14,7 @@ const AuthPage = () => {
     <div className="auth-container">
       <div className="auth-header">
         <h1>सेल्फ ~(को-ऑपरेटिव बैंक)</h1>
-        <p>Securely login to manage your account</p>
+        <p><strong>Securely login to manage your account</strong></p>
       </div>
       <div className="auth-form">
         <form>
