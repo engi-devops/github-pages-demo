@@ -11,45 +11,31 @@ env:
   CI: false
 
 jobs:
-  checkout:
-    name: 🔄 Checkout Repository
+  deploy:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
+      # Step 1: Check out the repository
+      - name: 🔄 Checkout Repository
         uses: actions/checkout@v3
 
-  setup-node:
-    name: 🛠️ Set Up Node.js
-    runs-on: ubuntu-latest
-    needs: checkout
-    steps:
-      - name: Set Up Node.js
+      # Step 2: Set up Node.js environment
+      - name: 🛠️ Set Up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18 # Use desired Node.js version
 
-  install-dependencies:
-    name: 📦 Install Dependencies
-    runs-on: ubuntu-latest
-    needs: setup-node
-    steps:
-      - name: Install Dependencies
+      # Step 3: Install project dependencies
+      - name: 📦 Install Dependencies
         run: npm ci
 
-  build:
-    name: 🏗️ Build Project
-    runs-on: ubuntu-latest
-    needs: install-dependencies
-    steps:
-      - name: Build Project
+      # Step 4: Build the project
+      - name: 🏗️ Build Project
         run: npm run build
 
-  deploy:
-    name: 🚀 Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
+      # Step 5: Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.TOKEN }}
@@ -57,10 +43,6 @@ jobs:
           user_name: GitHub Actions
           user_email: noreply@github.com
 
-  confirm:
-    name: ✅ Confirm Deployment
-    runs-on: ubuntu-latest
-    needs: deploy
-    steps:
-      - name: Post-deployment Confirmation
+      # Step 6: Post-deployment confirmation
+      - name: ✅ Confirm Deployment
         run: echo "Deployment to GitHub Pages was successful!"
