@@ -4,7 +4,6 @@ on:
     branches:
       - production
 
-# Environment variables
 env:
   CI: false
 
@@ -15,6 +14,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+      - name: Debug Checkout
+        run: |
+          echo "Current Directory: $(pwd)"
+          ls -la
 
   setup-node:
     name: 🛠️ Set Up Node.js
@@ -24,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18 # Use desired Node.js version
+          node-version: 18
 
   install-dependencies:
     name: 📦 Install Dependencies
@@ -33,9 +36,12 @@ jobs:
     steps:
       - name: Install Dependencies
         run: |
-          echo "Installing dependencies..."
-          npm ci || (echo "npm install failed. Showing logs:" && npm install)
-          echo "Dependencies installed successfully."
+          if [ -f "package-lock.json" ]; then
+            npm ci
+          else
+            echo "package-lock.json not found. Using npm install instead."
+            npm install
+          fi
 
   build-project:
     name: 🏗️ Build Project
@@ -54,7 +60,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.TOKEN }}
-          publish_dir: ./build # Change if your build directory is different
+          publish_dir: ./build
           user_name: GitHub Actions
           user_email: noreply@github.com
 
