@@ -23,8 +23,8 @@ const Education = () => (
       <div className="p-8 bg-white shadow-lg rounded-2xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
         <h3 className="text-2xl font-bold text-indigo-600">Bachelor’s Degree</h3>
         <p className="text-lg text-gray-700 mt-2">Computer Engineering</p>
-        <p className="text-sm text-gray-500 mt-1">Completed: [Insert Year Here]</p>
-        <p className="text-sm text-gray-500">Institution: [Insert University/College Name Here]</p>
+        <p className="text-sm text-gray-500 mt-1">Completed: 2018</p>
+        <p className="text-sm text-gray-500">Institution: Gujarat Technological University</p>
       </div>
     </div>
 
