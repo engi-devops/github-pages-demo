@@ -24,15 +24,40 @@
 
 // export default App;
 
-import React from "react";
-import AuthPage from "./components/AuthPage";
+// import React from "react";
+// import AuthPage from "./components/AuthPage";
 
-const App = () => {
+// const App = () => {
+//   return (
+//     <div>
+//       <AuthPage />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+import Header from './components/Header';
+import About from './components/About';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Education from './components/Education';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
+
+function App() {
   return (
     <div>
-      <AuthPage />
+      <Header />
+      <About />
+      <Skills />
+      <Experience />
+      <Education />
+      {/* <Projects /> */}
+      <Footer />
     </div>
   );
-};
+}
 
 export default App;
