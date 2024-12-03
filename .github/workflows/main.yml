@@ -1,51 +1,44 @@
+name: 🚀 Deploy to GitHub Pages
+
 # Trigger workflow on push to the production branch
 on:
   push:
     branches:
       - production
 
+# Environment variables
 env:
   CI: false
 
 jobs:
-  checkout-repo:
+  checkout:
     name: 🔄 Checkout Repository
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Debug Checkout
-        run: |
-          echo "Current Directory: $(pwd)"
-          ls -la
 
   setup-node:
     name: 🛠️ Set Up Node.js
-    runs-on: ubuntu-22.04
-    needs: checkout-repo
+    runs-on: ubuntu-latest
+    needs: checkout
     steps:
-      - name: Setup Node.js
+      - name: Set Up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 18 # Use desired Node.js version
 
   install-dependencies:
     name: 📦 Install Dependencies
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: setup-node
     steps:
       - name: Install Dependencies
-        run: |
-          if [ -f "package-lock.json" ]; then
-            npm ci
-          else
-            echo "package-lock.json not found. Using npm install instead."
-            npm install
-          fi
+        run: npm ci
 
-  build-project:
+  build:
     name: 🏗️ Build Project
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: install-dependencies
     steps:
       - name: Build Project
@@ -53,21 +46,21 @@ jobs:
 
   deploy:
     name: 🚀 Deploy to GitHub Pages
-    runs-on: ubuntu-22.04
-    needs: build-project
+    runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./build # Change if your build directory is different
           user_name: GitHub Actions
           user_email: noreply@github.com
 
-  confirm-deployment:
+  confirm:
     name: ✅ Confirm Deployment
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: deploy
     steps:
-      - name: Confirm Deployment
+      - name: Post-deployment Confirmation
         run: echo "Deployment to GitHub Pages was successful!"
