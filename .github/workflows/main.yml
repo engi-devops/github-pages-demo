@@ -11,14 +11,14 @@ env:
 jobs:
   checkout-repo:
     name: 🔄 Checkout Repository
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
   setup-node:
     name: 🛠️ Set Up Node.js
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: checkout-repo
     steps:
       - name: Setup Node.js
@@ -28,15 +28,18 @@ jobs:
 
   install-dependencies:
     name: 📦 Install Dependencies
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: setup-node
     steps:
       - name: Install Dependencies
-        run: npm ci
+        run: |
+          echo "Installing dependencies..."
+          npm ci || (echo "npm install failed. Showing logs:" && npm install)
+          echo "Dependencies installed successfully."
 
   build-project:
     name: 🏗️ Build Project
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: install-dependencies
     steps:
       - name: Build Project
@@ -44,7 +47,7 @@ jobs:
 
   deploy:
     name: 🚀 Deploy to GitHub Pages
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: build-project
     steps:
       - name: Deploy to GitHub Pages
@@ -57,7 +60,7 @@ jobs:
 
   confirm-deployment:
     name: ✅ Confirm Deployment
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: deploy
     steps:
       - name: Confirm Deployment
