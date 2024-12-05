@@ -20,7 +20,6 @@ const Skills = () => (
     {/* Skills List */}
     <div className="flex justify-center gap-6 flex-wrap relative z-10">
       {[
-        'React.js',
         'Node.js',
         'JavaScript',
         'HTML/CSS',
@@ -33,6 +32,7 @@ const Skills = () => (
         'AWS',
         'Google Cloud Platform',
         'Azure AI & Speech Services',
+        'React.js',
       ].map((skill, index) => (
         <span
           key={index}
