@@ -61,6 +61,98 @@ const Skills = () => {
         </p>
       </>
     ),
+    'PostgreSQL': (
+      <>
+        <h3 className="text-xl font-bold mb-4">PostgreSQL</h3>
+        <p className="text-left">
+          Strong understanding of relational database design and management with PostgreSQL. Skilled in writing complex queries, optimizing performance, and integrating databases with backend services.
+        </p>
+      </>
+    ),
+    'MongoDB': (
+      <>
+        <h3 className="text-xl font-bold mb-4">MongoDB</h3>
+        <p className="text-left">
+          Proficient in working with MongoDB for NoSQL database solutions, including designing flexible schemas, managing collections, and performing efficient CRUD operations for scalable applications.
+        </p>
+      </>
+    ),
+    'Redis': (
+      <>
+        <h3 className="text-xl font-bold mb-4">Redis</h3>
+        <p className="text-left">
+          Extensive experience with Redis as an in-memory data structure store for caching, session management, and real-time analytics. Skilled in implementing Redis for high-performance applications to reduce database load and optimize response times. Proficient in using data structures like hashes, lists, and sorted sets to solve complex problems. Hands-on experience with Redis clustering, replication, and persistence mechanisms to ensure scalability and fault tolerance in production environments.
+        </p>
+      </>
+    ),
+    'Socket.IO': (
+      <>
+        <h3 className="text-xl font-bold mb-4">Socket.IO</h3>
+        <ul className="list-disc list-inside text-left">
+          <li>Extensive experience in building real-time applications using Socket.IO, such as chat systems, notifications, and live dashboards.</li>
+          <li>Proficient in integrating <strong>@socket.io/redis-adapter</strong> for scaling real-time systems across multiple servers by enabling communication through Redis.</li>
+          <li>Skilled in using <strong>ioredis</strong> for connecting and managing Redis instances efficiently in distributed architectures.</li>
+          <li>Implemented inter-server communication using Redis Pub/Sub mechanisms to handle events between two or more distinct servers seamlessly.</li>
+          <li>Expertise in managing namespaces and rooms in Socket.IO to group users dynamically and broadcast messages efficiently.</li>
+          <li>Hands-on experience with connection handling, reconnection strategies, and implementing custom middleware for authentication and authorization.</li>
+          <li>Optimized WebSocket connections for high-throughput scenarios, ensuring low latency and reliable message delivery in real-time systems.</li>
+          <li>Developed strategies for handling large-scale deployments by combining Socket.IO with Docker, Kubernetes, and load balancers for horizontal scaling.</li>
+        </ul>
+      </>
+    ),
+    'Docker': (
+      <>
+        <h3 className="text-xl font-bold mb-4">Docker</h3>
+        <ul className="list-disc list-inside text-left">
+          <li>Proficient in containerizing applications using Docker to ensure consistent environments across development, testing, and production.</li>
+          <li>Experience in writing efficient <strong>Dockerfiles</strong> and managing multi-stage builds to optimize image sizes.</li>
+          <li>Skilled in using <strong>docker-compose</strong> to define and manage multi-container applications.</li>
+          <li>Familiar with creating and managing Docker networks to enable seamless communication between containers.</li>
+          <li>Intermediate knowledge of Docker volumes for persistent data storage and sharing across containers.</li>
+          <li>Experience with pulling, pushing, and managing images in container registries like <strong>Docker Hub</strong> and private registries.</li>
+          <li>Understanding of best practices for securing Docker containers and limiting resources using options like <strong>--memory</strong> and <strong>--cpu</strong>.</li>
+          <li>Capable of troubleshooting and debugging issues in Dockerized environments using logs and diagnostic commands like <strong>docker ps</strong>, <strong>docker logs</strong>, and <strong>docker inspect</strong>.</li>
+        </ul>
+      </>
+    ),
+    'AWS': (
+      <>
+        <h3 className="text-xl font-bold mb-4">AWS</h3>
+        <ul className="list-disc list-inside text-left">
+          <li>Proficient in managing AWS Identity and Access Management (<strong>IAM</strong>) to control user access and permissions securely.</li>
+          <li>Hands-on experience in deploying and managing virtual servers using <strong>EC2</strong>, including configuring security groups and auto-scaling.</li>
+          <li>Skilled in utilizing <strong>S3 buckets</strong> for object storage, managing lifecycle policies, and securing data with encryption and versioning.</li>
+          <li>Experience with <strong>Simple Queue Service (SQS)</strong> for decoupling application components and managing message queues efficiently.</li>
+          <li>Proficient in setting up <strong>Simple Notification Service (SNS)</strong> for real-time messaging and integrating it with other AWS services like Lambda and SQS.</li>
+          <li>Knowledgeable in leveraging <strong>Amazon EventBridge</strong> for building event-driven architectures and managing workflows between AWS services.</li>
+          <li>Hands-on experience with <strong>Elastic Beanstalk</strong> for deploying and scaling web applications seamlessly.</li>
+          <li>Skilled in writing and deploying serverless applications using <strong>Lambda functions</strong> to run code without managing servers.</li>
+          <li>Familiar with monitoring and optimizing resource usage across AWS services using tools like <strong>CloudWatch</strong>.</li>
+        </ul>
+      </>
+    ),
+    'Azure AI & Speech Services': (
+      <>
+        <h3 className="text-xl font-bold mb-4">Azure AI & Speech Services</h3>
+        <ul className="list-disc list-inside text-left">
+          <li>Proficient in managing Azure Virtual Machines (VMs), including configuration, deployment, and security management.</li>
+          <li>Experienced in handling Azure Identity and Access Management (IAM) to manage user roles, permissions, and secure access to resources.</li>
+          <li>Hands-on experience with <strong>Azure Speech Services</strong>, including speech-to-text, text-to-speech, and real-time transcription for diverse use cases.</li>
+          <li>Skilled in integrating <strong>Azure AI services</strong> for building intelligent applications, including utilizing tools like <strong>Azure OpenAI</strong> for ChatGPT API integration.</li>
+          <li>Capable of monitoring and optimizing the performance of AI services using <strong>Azure Monitor</strong> and other diagnostic tools.</li>
+        </ul>
+      </>
+    ),
+    'React.js': (
+      <>
+        <h3 className="text-xl font-bold mb-4">React.js</h3>
+        <p className="text-left">
+          Currently exploring the fundamentals of React.js, focusing on building reusable components, state management, and understanding the JSX syntax.
+        </p>
+      </>
+    ),
+
+
     default: (
       <>
         <h3 className="text-xl font-bold mb-4">Skill Details</h3>
