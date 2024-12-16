@@ -25,9 +25,17 @@ const Experience = () => (
         <p className="text-sm text-gray-500 mt-1">Nov 2020 - Present</p>
         <p className="text-sm text-gray-500 mb-4">Bengaluru, Karnataka, India · Remote</p>
         <p className="text-gray-700 leading-relaxed">
-          As a Senior Backend Software Engineer at <span className="font-bold">Tamasha.live</span>, I play a key role in developing and deploying advanced backend solutions that drive product innovation and scalability. My responsibilities include managing production infrastructure, leading discussions on feature architecture, conducting thorough code reviews, and optimizing existing functionalities to improve performance and resilience. Leveraging my expertise in <span className="font-bold">Node.js</span>, <span className="font-bold">PostgreSQL</span>, <span className="font-bold">MongoDB</span>, <span className="font-bold">Redis</span>, <span className="font-bold">Socket.IO</span>, <span className="font-bold">Docker</span>, <span className="font-bold">AWS</span>, <span className="font-bold">Google Cloud Platform</span>, and <span className="font-bold">Azure AI & Speech Services</span>, I ensure efficient, reliable, and seamless service delivery across all systems.
+          As a Senior Backend Software Engineer at <span className="font-bold">Tamasha.live</span>, I specialize in creating and deploying scalable backend solutions that boost product innovation and reliability. My core responsibilities include:
+          <ul className="list-disc ml-5 mt-2">
+            <li>Managing production infrastructure.</li>
+            <li>Leading feature architecture discussions.</li>
+            <li>Conducting code reviews to ensure quality.</li>
+            <li>Optimizing functionalities for performance and resilience.</li>
+          </ul>
+          I utilize my expertise in <span className="font-bold">Node.js</span>, <span className="font-bold">PostgreSQL</span>, <span className="font-bold">MongoDB</span>, <span className="font-bold">Redis</span>, <span className="font-bold">Socket.IO</span>, <span className="font-bold">Docker</span>, <span className="font-bold">AWS</span>, <span className="font-bold">Google Cloud</span>, and <span className="font-bold">Azure AI/Speech Services</span>, along with version control tools like <span className="font-bold">GitHub</span> and <span className="font-bold">GitLab</span>. My goal is to ensure seamless service delivery and enhance the user experience by maintaining efficient and reliable systems.
         </p>
       </div>
+
 
       {/* Job 2 */}
       <div className="p-8 bg-white shadow-lg rounded-2xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
@@ -35,9 +43,16 @@ const Experience = () => (
         <p className="text-sm text-gray-500 mt-1">Jun 2018 - Nov 2020 · 2 yrs 6 mos</p>
         <p className="text-sm text-gray-500 mb-4">Ahmedabad, Gujarat, India</p>
         <p className="text-gray-700 leading-relaxed">
-          In my role, I implemented intricate business logic and crafted robust APIs and services. My primary dedication revolved around developing all server-side logic, meticulously defining and maintaining databases, and ensuring an unwavering commitment to high performance and responsiveness to front-end requests.
+          In my role, I focus on implementing complex business logic and building reliable APIs and services. My key responsibilities include:
+          <ul className="list-disc ml-5 mt-2">
+            <li>Developing and maintaining server-side logic.</li>
+            <li>Defining and managing databases with precision.</li>
+            <li>Ensuring high performance and responsive communication with the front-end.</li>
+          </ul>
+          My work is dedicated to delivering seamless and efficient backend functionality to support the overall system architecture.
         </p>
       </div>
+
     </div>
 
     {/* Floating Decorative Elements */}
