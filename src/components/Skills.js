@@ -12,6 +12,7 @@ const Skills = () => {
     'MongoDB',
     'Redis',
     'Socket.IO',
+    'Integrating Kafka with ClickHouse',
     'Docker',
     'AWS',
     'Google Cloud Platform',
