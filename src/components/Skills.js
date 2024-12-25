@@ -12,7 +12,7 @@ const Skills = () => {
     'MongoDB',
     'Redis',
     'Socket.IO',
-    'Integrating Kafka with ClickHouse',
+    'kafka',
     'Docker',
     'AWS',
     'Google Cloud Platform',
@@ -150,6 +150,19 @@ const Skills = () => {
         <p className="text-left">
           Currently exploring the fundamentals of React.js, focusing on building reusable components, state management, and understanding the JSX syntax.
         </p>
+      </>
+    ),
+    'kafka' :(
+      <>
+        <h3 className="text-xl font-bold mb-4">Expertise in Real-Time Streaming & Data Integration</h3>
+        <ul className="list-disc list-inside text-left">
+          <li>Skilled in designing and implementing real-time data pipelines using <strong>Apache Kafka</strong> for high-throughput and low-latency applications.</li>
+          <li>Proficient in integrating Kafka with <strong>ClickHouse</strong> to enable real-time analytics and data-driven decision-making.</li>
+          <li>Strong background in building scalable and fault-tolerant systems for processing massive datasets in real-time.</li>
+          <li>Adept at optimizing ClickHouse storage, partitioning, and indexing for maximum query efficiency.</li>
+          <li>Experience in handling use cases like log analytics, real-time user behavior tracking, and fraud detection using Kafka and ClickHouse.</li>
+          <li>Expertise in technologies including <strong>Kafka Connect</strong>, <strong>Kafka Streams</strong>, <strong>Schema Registry</strong>, and distributed data architectures.</li>
+        </ul>
       </>
     ),
 
